@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+
+import { LogLevel } from "@azure/msal-browser";
+
 /**
  * Configuration object to be passed to MSAL instance on creation. 
  * For a full list of MSAL.js configuration parameters, visit:
@@ -20,16 +27,16 @@ export const msalConfig = {
                     return;		
                 }		
                 switch (level) {		
-                    case msal.LogLevel.Error:		
+                    case LogLevel.Error:		
                         console.error(message);		
                         return;		
-                    case msal.LogLevel.Info:		
+                    case LogLevel.Info:		
                         console.info(message);		
                         return;		
-                    case msal.LogLevel.Verbose:		
+                    case LogLevel.Verbose:		
                         console.debug(message);		
                         return;		
-                    case msal.LogLevel.Warning:		
+                    case LogLevel.Warning:		
                         console.warn(message);		
                         return;		
                 }	

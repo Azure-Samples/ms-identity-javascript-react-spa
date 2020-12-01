@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ */
+
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
@@ -27,12 +32,12 @@ export const PageLayout = (props) => {
     return (
         <>
             <Navbar bg="primary" variant="dark">
-                <a className="navbar-brand" href="/">MS Identity Platform</a>
-                <SignInSignOutButton/>
+                <a className="navbar-brand" href="/">Microsoft Identity Platform</a>
+                <SignInSignOutButton />
             </Navbar>
             <h5><center>Welcome to the Microsoft Authentication Library For Javascript - React Quickstart</center></h5>
-            <br/>
-            <br/>
+            <br />
+            <br />
             {props.children}
         </>
     );
