@@ -40,7 +40,7 @@
           }
         },
         {
-          "settingFile": "/src/graphConfig.js", 
+          "settingFile": "/src/authConfig.js", 
             "replaceTokens": 
               {
               "msgraphEndpointHost": "Enter_the_Graph_Endpoint_Here"
