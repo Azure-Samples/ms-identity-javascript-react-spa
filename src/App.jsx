@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { MsalProvider, AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
-import { PublicClientApplication } from "@azure/msal-browser";
-import { msalConfig, loginRequest } from "./authConfig";
-import { PageLayout } from "./ui.jsx";
-import { ProfileData, callMsGraph } from "./graph.jsx";
+import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
+import { loginRequest } from "./authConfig";
+import { PageLayout } from "./components/PageLayout";
+import { ProfileData } from "./components/ProfileData";
+import { callMsGraph } from "./graph";
 import Button from "react-bootstrap/Button";
 import "./styles/App.css";
 
+/**
+ * Renders information about the signed-in user or a button to retrieve data about the user
+ */
 const ProfileContent = () => {
     const { instance, accounts } = useMsal();
     const [graphData, setGraphData] = useState(null);
 
     function RequestProfileData() {
+        // Silently acquires an access token which is then attached to a request for MS Graph data
         instance.acquireTokenSilent({
             ...loginRequest,
             account: accounts[0]
@@ -32,6 +36,9 @@ const ProfileContent = () => {
     );
 };
 
+/**
+ * If a user is authenticated the ProfileContent component above is rendered. Otherwise a message indicating a user is not authenticated is rendered.
+ */
 const MainContent = () => {    
     return (
         <div className="App">
@@ -47,13 +54,9 @@ const MainContent = () => {
 };
 
 export default function App() {
-    const msalInstance = new PublicClientApplication(msalConfig);
-
     return (
-        <MsalProvider instance={msalInstance}>
-            <PageLayout>
-                <MainContent />
-            </PageLayout>
-        </MsalProvider>
+        <PageLayout>
+            <MainContent />
+        </PageLayout>
     );
 }
