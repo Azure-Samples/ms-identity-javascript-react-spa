@@ -36,15 +36,9 @@
             "appId": "Enter_the_Application_Id_Here",
             "tenantId": "Enter_the_Tenant_Info_Here",
             "authorityEndpointHost": "Enter_the_Cloud_Instance_Id_Here",
-            "redirectUri": "Enter_the_Redirect_Uri_Here"
+            "redirectUri": "Enter_the_Redirect_Uri_Here",
+            "msgraphEndpointHost": "Enter_the_Graph_Endpoint_Here"
           }
-        },
-        {
-          "settingFile": "/src/authConfig.js", 
-            "replaceTokens": 
-              {
-              "msgraphEndpointHost": "Enter_the_Graph_Endpoint_Here"
-            }
         }
       ]
     }
