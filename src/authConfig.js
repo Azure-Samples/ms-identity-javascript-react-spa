@@ -53,7 +53,7 @@ export const msalConfig = {
  * For more information about OIDC scopes, visit: 
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#openid-connect-scopes
  */
-// <ms_docref_graph_api_request>
+// <ms_docref_graph_api_request_conf>
 export const loginRequest = {
     scopes: ["User.Read"]
 };
@@ -65,4 +65,4 @@ export const loginRequest = {
 export const graphConfig = {
     graphMeEndpoint: "Enter_the_Graph_Endpoint_Herev1.0/me"
 };
-// </ms_docref_graph_api_request>
+// </ms_docref_graph_api_request_conf>
