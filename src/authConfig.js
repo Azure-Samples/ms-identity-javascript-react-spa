@@ -10,6 +10,7 @@ import { LogLevel } from "@azure/msal-browser";
  * For a full list of MSAL.js configuration parameters, visit:
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md 
  */
+// <ms_docref_msal_configuration>
 export const msalConfig = {
     auth: {
         clientId: "Enter_the_Application_Id_Here",
@@ -20,6 +21,7 @@ export const msalConfig = {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
         storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
     },
+// </ms_docref_msal_configuration>
     system: {	
         loggerOptions: {	
             loggerCallback: (level, message, containsPii) => {	
@@ -51,6 +53,7 @@ export const msalConfig = {
  * For more information about OIDC scopes, visit: 
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#openid-connect-scopes
  */
+// <ms_docref_graph_api_request>
 export const loginRequest = {
     scopes: ["User.Read"]
 };
@@ -62,3 +65,4 @@ export const loginRequest = {
 export const graphConfig = {
     graphMeEndpoint: "Enter_the_Graph_Endpoint_Herev1.0/me"
 };
+// </ms_docref_graph_api_request>
