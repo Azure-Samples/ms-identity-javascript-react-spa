@@ -2,7 +2,7 @@
  * Copyright (c) Microsoft Corporation. All rights reserved.
  * Licensed under the MIT License.
  */
-
+// <ms_docref_sign_in_out>
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 
@@ -30,3 +30,4 @@ export const PageLayout = (props) => {
         </>
     );
 };
+// </ms_docref_sign_in_out>
