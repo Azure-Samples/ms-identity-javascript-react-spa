@@ -1,10 +1,10 @@
-import { graphConfig } from "./authConfig";
+import { graphConfig, GraphData } from "./authConfig";
 
 /**
  * Attaches a given access token to a MS Graph API call. Returns information about the user
- * @param accessToken 
+ * @param accessToken
  */
-export async function callMsGraph(accessToken) {
+export async function callMsGraph(accessToken: string): Promise<GraphData> {
     const headers = new Headers();
     const bearer = `Bearer ${accessToken}`;
 

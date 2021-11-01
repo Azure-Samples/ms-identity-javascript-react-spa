@@ -7,7 +7,7 @@ import Dropdown from "react-bootstrap/esm/Dropdown";
 /**
  * Renders a drop down button with child buttons for logging in with a popup or redirect
  */
-export const SignInButton = () => {
+export const SignInButton: React.FC = () => {
     const { instance } = useMsal();
 
     const handleLogin = (loginType) => {

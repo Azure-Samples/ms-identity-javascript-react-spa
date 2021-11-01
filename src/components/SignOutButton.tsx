@@ -6,7 +6,7 @@ import Dropdown from "react-bootstrap/esm/Dropdown";
 /**
  * Renders a sign-out button
  */
-export const SignOutButton = () => {
+export const SignOutButton: React.FC = () => {
     const { instance } = useMsal();
 
     const handleLogout = (logoutType) => {

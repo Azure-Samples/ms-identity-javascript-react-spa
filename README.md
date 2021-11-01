@@ -14,22 +14,23 @@ This sample demonstrates the following MSAL React concepts:
 
 ## Contents
 
-| File/folder       | Description                                |
-|-------------------|--------------------------------------------|
-| `src`             | Contains sample source files               |
-| `styles`          | Contains styling for the sample            |
-| `components`      | Contains ui components such as sign-in button, sign-out button and navbar |
-| `public`          | Contains static content such as images and the base html   |
-| `authConfig.js`   | Contains configuration parameters for the sample.      |
-| `App.jsx`         | Contains MSAL React Components and main sample content |
-| `graph.js`       | Provides a helper function for calling MS Graph API.   |                      |
-| `index.js`        | Contains the root component and MsalProvider |
-| `.gitignore`      | Define what to ignore at commit time.      |
-| `CHANGELOG.md`    | List of changes to the sample.             |
-| `CONTRIBUTING.md` | Guidelines for contributing to the sample. |
-| `package.json`    | Package manifest for npm.                  |
-| `README.md`       | This README file.                          |
-| `LICENSE`         | The license for the sample.                |
+| File/folder           | Description                                |
+|-----------------------|--------------------------------------------|
+| `src`                 | Contains sample source files               |
+| `styles`              | Contains styling for the sample            |
+| `components`          | Contains ui components such as sign-in button, sign-out button and navbar |
+| `public`              | Contains static content such as images and the base html   |
+| `authConfig.ts`       | Contains configuration parameters for the sample.      |
+| `config.example.json` | Contains json configuration that authConfig.ts reads from.      |
+| `App.tsx`             | Contains MSAL React Components and main sample content |
+| `graph.ts`            | Provides a helper function for calling MS Graph API.   |
+| `index.ts`            | Contains the root component and MsalProvider |
+| `.gitignore`          | Define what to ignore at commit time.      |
+| `CHANGELOG.md`        | List of changes to the sample.             |
+| `CONTRIBUTING.md`     | Guidelines for contributing to the sample. |
+| `package.json`        | Package manifest for npm.                  |
+| `README.md`           | This README file.                          |
+| `LICENSE`             | The license for the sample.                |
 
 **Note:** This sample was bootstrapped using [Create React App](https://github.com/facebook/create-react-app).
 
@@ -49,12 +50,12 @@ This sample demonstrates the following MSAL React concepts:
 ## Running the sample
 
 1. Configure authentication and authorization parameters:
-   1. Open `src/authConfig.js`
-   2. Replace the string `"Enter_the_Application_Id_Here"` with your app/client ID on AAD Portal.
-   3. Replace the string `"Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here"` with `"https://login.microsoftonline.com/common/"` (*note*: This is for multi-tenant applications located on the global Azure cloud. For more information, see the [documentation](https://docs.microsoft.com/azure/active-directory/develop/quickstart-v2-javascript-auth-code)).
-   4. Replace the string `"Enter_the_Redirect_Uri_Here"` with the redirect uri you setup on AAD Portal.
+   1. Copy `src/config.example.json` to `src/config.json`.
+   2. Replace the `clientId` placeholder string `"Enter_the_Application_Id_Here"` with your app/client ID on AAD Portal.
+   3. Replace the `authority` placeholder string `"Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here"` with `"https://login.microsoftonline.com/common/"` (*note*: This is for multi-tenant applications located on the global Azure cloud. For more information, see the [documentation](https://docs.microsoft.com/azure/active-directory/develop/quickstart-v2-javascript-auth-code)).
+   4. Replace the `redirectUri` placeholder string `"Enter_the_Redirect_Uri_Here"` with the redirect uri you setup on AAD Portal.
 2. Configure the parameters for calling MS Graph API:
-   2. Replace the string `"Enter_the_Graph_Endpoint_Herev1.0/me"` with `"https://graph.microsoft.com/v1.0/me"` (*note*: This is for MS Graph instance located on the global Azure cloud. For more information, see the [documentation](https://docs.microsoft.com/en-us/graph/deployments))
+   1. Replace the `graphMeEndpoint` placeholder string `"Enter_the_Graph_Endpoint_Herev1.0/me"` with `"https://graph.microsoft.com/v1.0/me"` (*note*: This is for MS Graph instance located on the global Azure cloud. For more information, see the [documentation](https://docs.microsoft.com/en-us/graph/deployments))
 3. To start the sample application, run `npm start`.
 4. Finally, open a browser and navigate to [http://localhost:3000](http://localhost:3000).
 

@@ -1,10 +1,15 @@
 import React from "react";
+import { GraphData } from "../authConfig";
+
+type Props = {
+  graphData: GraphData;
+}
 
 /**
  * Renders information about the user obtained from MS Graph
- * @param props 
+ * @param props
  */
-export const ProfileData = (props) => {
+export const ProfileData: React.FC<Props> = (props: Props) => {
     console.log(props.graphData);
 
     return (
