@@ -6,6 +6,26 @@
 import { LogLevel } from "@azure/msal-browser";
 
 /**
+ * Configuration object with all information of B2C User Flows
+ */
+export const b2cPolicies = {
+    names: {
+        signUpSignIn: "EntereSignUpSignInUserFlowLabel_Here",
+        editProfile: "EntereEditProfileUserFlowLabel_Here"
+    },
+    authorities: {
+        signUpSignIn: {
+            authority: "Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here_EntereSignUpSignInUserFlowLabel_Here",
+        }
+        ,
+        editProfile: {
+            authority: "Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here_EntereEditProfileUserFlowLabel_Here"
+        }
+    },
+    authorityDomain: "Enter_Autority_Domain"
+}
+
+/**
  * Configuration object to be passed to MSAL instance on creation. 
  * For a full list of MSAL.js configuration parameters, visit:
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md 
@@ -13,7 +33,8 @@ import { LogLevel } from "@azure/msal-browser";
 export const msalConfig = {
     auth: {
         clientId: "Enter_the_Application_Id_Here",
-        authority: "Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here",
+        authority: b2cPolicies.authorities.signUpSignIn.authority,
+        knownAuthorities: [b2cPolicies.authorityDomain],
         redirectUri: "Enter_the_Redirect_Uri_Here"
     },
     cache: {
