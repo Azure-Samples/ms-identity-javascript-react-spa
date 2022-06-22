@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components"
   ],
-  "SelectedNode": "\\C:\\Progetti\\GitHubCollaboration",
   "PreviewInSolutionExplorer": false
 }
