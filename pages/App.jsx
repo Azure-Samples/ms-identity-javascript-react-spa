@@ -5,7 +5,7 @@ import { PageLayout } from "./components/PageLayout";
 import { ProfileData } from "./components/ProfileData";
 import { callMsGraph } from "./graph";
 import Button from "react-bootstrap/Button";
-import "./styles/App.css";
+import '../styles/index.css'
 
 /**
  * Renders information about the signed-in user or a button to retrieve data about the user
