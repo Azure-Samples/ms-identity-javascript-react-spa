@@ -12,7 +12,10 @@ export const SignInButton = () => {
 
     const handleLogin = (loginType) => {
         if (loginType === "popup") {
-            instance.loginPopup(loginRequest).catch(e => {
+            instance.loginPopup({
+                ...loginRequest,
+                redirectUri: "/redirect.html"
+            }).catch(e => {
                 console.log(e);
             });
         } else if (loginType === "redirect") {
