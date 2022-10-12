@@ -5,8 +5,6 @@ import React from "react";
  * @param props 
  */
 export const ProfileData = (props) => {
-    console.log(props.graphData);
-
     return (
         <div id="profile-div">
             <p><strong>First Name: </strong> {props.graphData.givenName}</p>

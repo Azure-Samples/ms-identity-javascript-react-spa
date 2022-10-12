@@ -1,33 +1,41 @@
 {
-  "name": "msal-react-quickstart",
-  "version": "0.1.0",
-  "description": "A React single-page application calling Microsoft Graph API using MSAL.js (w/ AAD v2 endpoint)",
-  "private": true,
-  "dependencies": {
-    "@azure/msal-browser": "^2.15.0",
-    "@azure/msal-react": "^1.0.1",
-    "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
-    "react": "^17.0.1",
-    "react-bootstrap": "^1.3.0",
-    "react-dom": "^17.0.0",
-    "react-scripts": "^4.0.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "ms-identity-javascript-react-spa",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@azure/msal-browser": "^2.30.0",
+        "@azure/msal-react": "^1.4.9",
+        "bootstrap": "^5.2.1",
+        "react": "^18.2.0",
+        "react-bootstrap": "^2.5.0",
+        "react-dom": "^18.2.0",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "react-scripts": "5.0.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
