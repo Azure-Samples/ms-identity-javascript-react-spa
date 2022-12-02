@@ -62,5 +62,5 @@ export const loginRequest = {
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/resources-and-scopes.md
  */
 export const graphConfig = {
-    graphMeEndpoint: "Enter_the_Graph_Endpoint_Herev1.0/me"
+    graphMeEndpoint: "Enter_the_Graph_Endpoint_Here/v1.0/me" //e.g. https://graph.microsoft.com/v1.0/me
 };
