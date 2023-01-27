@@ -27,12 +27,14 @@ export const PageLayout = (props) => {
                     {isAuthenticated ? <SignOutButton /> : <SignInButton />}
                 </div>
             </Navbar>
-            <h5>
-                <center>Welcome to the Microsoft Authentication Library For Javascript - React Quickstart</center>
-            </h5>
-            <br />
-            <br />
-            {props.children}
+                <div className="title">
+                    <h5>
+                        Welcome to the Microsoft Authentication Library For Javascript - React SPA Tutorial
+                    </h5>
+                </div>
+                <div className="profileContent">
+                    {props.children}
+                </div>
         </>
     );
 };

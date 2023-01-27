@@ -5,12 +5,14 @@ import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/
 import Button from 'react-bootstrap/Button';
 import { loginRequest } from './authConfig';
 import { callMsGraph } from './graph';
+
 import { ProfileData } from './components/ProfileData';
 
 
 /**
  * Renders information about the signed-in user or a button to retrieve data about the user
  */
+
 const ProfileContent = () => {
     const { instance, accounts } = useMsal();
     const [graphData, setGraphData] = useState(null);
@@ -29,17 +31,18 @@ const ProfileContent = () => {
 
     return (
         <>
-            <h5 className="card-title">Welcome {accounts[0].name}</h5>
+            <h5 className="profileContent">Welcome {accounts[0].name}</h5>
             {graphData ? (
                 <ProfileData graphData={graphData} />
             ) : (
                 <Button variant="secondary" onClick={RequestProfileData}>
-                    Request Profile Information
+                    Request Profile
                 </Button>
             )}
         </>
     );
 };
+
 
 /**
  * If a user is authenticated the ProfileContent component above is rendered. Otherwise a message indicating a user is not authenticated is rendered.

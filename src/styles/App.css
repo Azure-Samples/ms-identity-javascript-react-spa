@@ -1,8 +1,18 @@
 .App {
   text-align: center;
+  padding: 8px;
 }
 
 .navbarStyle {
   padding: .5rem 1rem !important
 }
 
+.title{
+  text-align: center;
+  padding: 8px;
+}
+
+.profileContent {
+  padding: 8px;
+
+}

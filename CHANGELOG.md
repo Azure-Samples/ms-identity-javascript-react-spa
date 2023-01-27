@@ -1,14 +1,13 @@
-# CHANGELOG
+## [project-title] Changelog
 
-## 05/14/2021
+<a name="x.y.z"></a>
+# x.y.z (yyyy-mm-dd)
 
-* Bumped msal-browser and msal-react
+*Features*
+* ...
 
-## 04/22/2021
+*Bug Fixes*
+* ...
 
-* Bumped msal-browser and msal-react
-* Replaced logout with logoutPopup and logoutRedirect
-
-## 11/24/2020
-
-* Initial sample.
+*Breaking Changes*
+* ...
